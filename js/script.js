@@ -6,13 +6,13 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 // &appid=
 
 async function checkWeather(city) {
-  const response = await fetch(`${apiUrl}${"kolkata"}&appid=${apiKey}`);
+  const response = await fetch(`${apiUrl}${"bareilly"}&appid=${apiKey}`);
   const data = await response.json();
-
-  document.querySelector(".teplature").innerHTML = "";
-  document.querySelector(".cityName").innerHTML = "";
-  document.querySelector(".Humidity").innerHTML = "";
-  document.querySelector(".windSpeed").innerHTML = "";
+  console.log(data);
+  //   document.querySelector(".teplature").innerHTML = "";
+  //   document.querySelector(".cityName").innerHTML = "";
+  //   document.querySelector(".Humidity").innerHTML = "";
+  //   document.querySelector(".windSpeed").innerHTML = "";
 }
 
 searchBtn.addEventListener("click", () => {});
