@@ -18,9 +18,13 @@ async function checkWeather(city) {
   document.querySelector(
     ".windSpeed"
   ).innerHTML = `${data.current.wind_kph} km/h`;
+
+
   document.querySelector(".weatherText").innerHTML =
     data.current.condition.text;
+
   let WeatherImage = document.querySelector(".WeatherImage");
+
   if (data.current.condition.text === "Mist") {
     WeatherImage.src = "Static/mist.png";
   } else if (
