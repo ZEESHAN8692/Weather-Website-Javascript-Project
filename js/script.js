@@ -5,7 +5,7 @@ const apiKey = "d8e84a6b367d4b6da5e95420251103";
 const apiUrl = "http://api.weatherapi.com/v1/current.json?key=";
 // let cityName = "bareilly";
 
-async function checkWeather(city) {
+async function checkWeather(city = "kolkata") {
   const response = await fetch(`${apiUrl}${apiKey}&q=${city}`);
   // const response = await fetch(`${apiUrl}${"bareilly"}&appid=${apiKey}`);
   const data = await response.json();
@@ -18,7 +18,6 @@ async function checkWeather(city) {
   document.querySelector(
     ".windSpeed"
   ).innerHTML = `${data.current.wind_kph} km/h`;
-
 
   document.querySelector(".weatherText").innerHTML =
     data.current.condition.text;
