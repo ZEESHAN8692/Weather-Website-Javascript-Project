@@ -96,3 +96,7 @@ body{
     filter: drop-shadow(10px 10px 20px rgb(15, 82, 158) );
 }
 
+.weatherText{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
