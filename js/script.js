@@ -31,7 +31,11 @@ async function checkWeather(city = "kolkata") {
     data.current.condition.text === "Sunny"
   ) {
     WeatherImage.src = "Static/clear.png";
-  } else if (data.current.condition.text === "Clouds") {
+  } else if (
+    data.current.condition.text === "Clouds" ||
+    data.current.condition.text === "Partly cloudy" ||
+    data.current.condition.text === "Partly Cloudy"
+  ) {
     WeatherImage.src = "Static/cloudy.png";
   } else if (data.current.condition.text === "Drizzle") {
     WeatherImage.src = "Static/drizzle.png";
@@ -43,7 +47,7 @@ async function checkWeather(city = "kolkata") {
     WeatherImage.src = "Static/fog.png";
   }
 }
-
+checkWeather();
 searchBtn.addEventListener("click", () => {
   checkWeather(searchInput.value);
 });
