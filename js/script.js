@@ -1,7 +1,8 @@
 let searchInput = document.querySelector(".searchInput");
 let searchBtn = document.querySelector(".searchBtn");
 
-const apiKey = "d8e84a6b367d4b6da5e95420251103";
+const apiKey = "011221a2bcf1ba2efb623f1dd53cb91e";
+// d8e84a6b367d4b6da5e95420251103
 const apiUrl = "https://api.weatherapi.com/v1/current.json?key=";
 // let cityName = "bareilly";
 
